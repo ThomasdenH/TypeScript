@@ -1285,14 +1285,14 @@ interface Array<T> {
 }
 
 interface ArrayConstructor {
-    new(arrayLength?: number): any[];
+    new(arrayLength?: number): unknown[];
     new <T>(arrayLength: number): T[];
     new <T>(...items: T[]): T[];
-    (arrayLength?: number): any[];
+    (arrayLength?: number): unknown[];
     <T>(arrayLength: number): T[];
     <T>(...items: T[]): T[];
-    isArray(arg: any): arg is Array<any>;
-    readonly prototype: Array<any>;
+    isArray(arg: unknown): arg is Array<unknown>;
+    readonly prototype: Array<unknown>;
 }
 
 declare const Array: ArrayConstructor;
